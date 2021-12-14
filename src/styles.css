@@ -6,10 +6,19 @@
 
 html{
     font-size: 10px;
+    height: 100vh;
 }
 
 :root{
     --primary-color:rgb(45, 200, 45);
+    --secundary-color:rgb(59, 248, 59);
+    --tertiary-color:wheat;
+    --quaternary-color:rgb(251, 237, 212);
+    --quinary-color:grey;
     --font-color-primary:white;
     --font-family-primary:monospace;
+}
+
+body{
+    height: 100%;
 }
