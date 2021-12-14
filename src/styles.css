@@ -7,3 +7,9 @@
 html{
     font-size: 10px;
 }
+
+:root{
+    --primary-color:rgb(45, 200, 45);
+    --font-color-primary:white;
+    --font-family-primary:monospace;
+}
