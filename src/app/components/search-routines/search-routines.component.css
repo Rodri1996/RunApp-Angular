@@ -7,6 +7,13 @@
     background-color: var(--tertiary-color);
 }
 
+.container-search{
+    background-color: var(--secundary-color);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
 .result{
     display: flex;
     justify-content: space-between;
@@ -40,29 +47,16 @@
     justify-content: space-evenly;
 }
 
-.container-search{
-    background-color: var(--secundary-color);
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-}
 
 .icono-input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    border: 1px solid;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
 
 .inputText{
     width: 80%;
-    border: 1px solid;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
-    text-align: center;
 }
 
 .inputText,.icono-input{

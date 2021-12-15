@@ -22,3 +22,16 @@ html{
 body{
     height: 100%;
 }
+
+.icono-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    border: 1px solid;
+}
+
+.inputText{
+    border: 1px solid;
+    text-align: center;
+}

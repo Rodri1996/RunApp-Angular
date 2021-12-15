@@ -45,11 +45,6 @@
 }
 
 .icono-input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    border: 1px solid;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
     background-color: var(--secundary-color);
@@ -57,10 +52,8 @@
 
 .inputText{
     width: 100%;
-    border: 1px solid;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
-    text-align: center;
 }
 
 .inputText,.icono-input{
