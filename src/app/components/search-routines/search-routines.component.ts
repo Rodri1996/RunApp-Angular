@@ -11,7 +11,12 @@ export class SearchRoutinesComponent implements OnInit {
 
   patronBusqueda:string=""
   routines:Routine[]=[]
+  results:Routine[]=[]
+  buscadorRutinas:Buscador = new Buscador()
+  inputEmpty!:string
+
   constructor(private routineService:RoutineService) { }
+
 
   ngOnInit(){
     this.routines = this.findRoutines()
@@ -22,8 +27,16 @@ export class SearchRoutinesComponent implements OnInit {
     return this.routineService.getRoutines()
   }
 
-  buscarRutina(){
-    
+  buscarRutinas(){
+    this.results = this.buscadorRutinas.filter(this.routines,this.patronBusqueda)
+    this.inputEmpty=""
   }
 
+}
+
+class Buscador{
+
+  filter(routines:Routine[],patron:string):Routine[]{
+    return routines.filter(routine=>routine.name.toLowerCase().match(patron));
+  }
 }

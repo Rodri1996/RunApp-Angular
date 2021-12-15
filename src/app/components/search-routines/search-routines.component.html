@@ -1,9 +1,11 @@
 <section class="container-search"> 
     <input type="text" class="inputText"
         [(ngModel)]="patronBusqueda"
+        placeholder="Busque una rutina aquí"
+        value={{this.inputEmpty}}
     >
     
-        <button class="button-little button-search-little" (click)="buscarRutina()">
+        <button class="button-little button-search-little" (click)="buscarRutinas()">
             <i class="fas fa-search"></i>
         </button>
 </section>
@@ -12,11 +14,11 @@
         Resultados
         <div>
             <i class="fas fa-search"></i>
-            Total: 5
+            Total: {{results.length}}
         </div>
     </section>
-    
-    <section class="routine" *ngFor="let routine of routines | routine:patronBusqueda">
+    <!-- | routine:patronBusqueda -->
+    <section class="routine" *ngFor="let routine of results">
         <div class="routine-data">
             <strong>
                 {{routine.name}}  
