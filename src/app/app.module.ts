@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SearchRoutinesComponent } from './components/search-routines/search-routines.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { RoutinePipe } from './pipes/routine.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     NavBarComponent,
     FooterComponent,
     SearchRoutinesComponent,
-    LoginComponent
+    LoginComponent,
+    RoutinePipe,
   ],
   imports: [
     BrowserModule,

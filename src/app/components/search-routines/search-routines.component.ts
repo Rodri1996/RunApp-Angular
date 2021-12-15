@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Routine } from 'src/app/domain/routine';
 import { RoutineService } from 'src/app/services/routine.service';
 
 @Component({
@@ -9,15 +10,16 @@ import { RoutineService } from 'src/app/services/routine.service';
 export class SearchRoutinesComponent implements OnInit {
 
   patronBusqueda:string=""
-  //routines:Routine[]=[]
+  routines:Routine[]=[]
   constructor(private routineService:RoutineService) { }
 
   ngOnInit(){
-    this.findRoutines()
+    this.routines = this.findRoutines()
+    console.info(this.routines)
   }
 
-  findRoutines(){
-    this.routineService.getRoutines()
+  findRoutines():Routine[]{
+    return this.routineService.getRoutines()
   }
 
   buscarRutina(){

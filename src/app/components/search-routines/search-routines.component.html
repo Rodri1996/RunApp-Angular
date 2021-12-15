@@ -16,14 +16,14 @@
         </div>
     </section>
     
-    <section class="routine">
+    <section class="routine" *ngFor="let routine of routines | routine:patronBusqueda">
         <div class="routine-data">
             <strong>
-                Rutini  
+                {{routine.name}}  
                 <i class="far fa-star"></i>
             </strong>
-            <span style="color: grey;">55 minutos</span>
-            <p style="font-family:Arial, Helvetica, sans-serif ;">Por Horacio Guaraní</p>
+            <span style="color: grey;">{{routine.duracion}} minutos</span>
+            <p style="font-family:Arial, Helvetica, sans-serif ;">{{routine.autor}}</p>
         </div>
         <div class="routine-actions">
             <button class="button-little button-routine-little">
