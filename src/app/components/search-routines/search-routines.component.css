@@ -1,10 +1,5 @@
 .primary-section{
-    width: 100%;
-    display: flex;
     justify-content: start;
-    flex-direction: column;
-    min-height: 100%;
-    background-color: var(--tertiary-color);
 }
 
 .container-search{
@@ -44,11 +39,15 @@
 .routine-actions{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
+.button-routine-little{
+    margin: 2px;
+    border-radius: 7px;
+}
 
-.icono-input{
+.button-search-little{
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
@@ -59,6 +58,20 @@
     border-bottom-left-radius: 6px;
 }
 
-.inputText,.icono-input{
+.inputText{
     height: 40px;
 }
+
+.edition-icon{
+    color: rgb(7, 40, 148);
+}
+
+.delete-icon{
+    color: red;
+}
+
+.icon{
+    height: 16px;
+    width:18px;
+}
+

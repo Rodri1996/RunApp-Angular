@@ -23,6 +23,31 @@ body{
     height: 100%;
 }
 
+.primary-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: var(--tertiary-color);
+}
+
+.button-big{
+    height: 50px;
+    width: 100px;
+    background-color: var(--primary-color);
+    font-size:2rem;
+    color: var(--tertiary-color);
+    font-weight: 500;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.button-little{
+    width: 45px;
+    background-color: var(--quaternary-color);
+    height: 40px;
+}
+
 .icono-input{
     display: flex;
     justify-content: center;
@@ -35,3 +60,8 @@ body{
     border: 1px solid;
     text-align: center;
 }
+
+.label-input{
+    font-size: 2rem;
+}
+

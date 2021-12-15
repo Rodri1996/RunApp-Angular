@@ -1,8 +1,11 @@
 <section class="container-search"> 
-    <input type="text" class="inputText">
-    <div class="icono-input">
-        <i class="fas fa-search"></i>
-    </div>
+    <input type="text" class="inputText"
+        [(ngModel)]="patronBusqueda"
+    >
+    
+        <button class="button-little button-search-little" (click)="buscarRutina()">
+            <i class="fas fa-search"></i>
+        </button>
 </section>
 <section class="primary-section">
     <section class="result">
@@ -23,8 +26,12 @@
             <p style="font-family:Arial, Helvetica, sans-serif ;">Por Horacio Guaraní</p>
         </div>
         <div class="routine-actions">
-            <i class="fas fa-pen"></i>
-            <i class="fas fa-trash-alt"></i>
+            <button class="button-little button-routine-little">
+                <i class="fas fa-pen icon edition-icon"></i>
+            </button>
+            <button class="button-little button-routine-little">
+                <i class="fas fa-trash-alt icon delete-icon"></i>
+            </button>
         </div>
     </section>
 </section>
