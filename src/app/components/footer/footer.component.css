@@ -1,7 +1,7 @@
 .footer{
     background-color: var(--primary-color);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 1em 2.8em;
     align-items: center;
     color: var(--font-color-primary);
