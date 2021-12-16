@@ -1,14 +1,17 @@
+import { Routine } from "./routine"
+
 export class User{
     
     errorMessage:string=""
+    favoriteRoutines:string[]=[]
 
-    constructor(public id:number,public name:string,public username:string,public password:string){
+    constructor(public name:string,public username:string,public password:string){
 
     }
 
     static fromJson(userJson:any):User{
         const user =Object.assign(
-            new User(0,'','',''),
+            new User('','',''),
             userJson,
             {
                 
@@ -27,4 +30,18 @@ export class User{
             this.errorMessage=""
         }
     }
+
+    putFavoriteRoutine(routine:string){
+        this.favoriteRoutines.push(routine)
+    }
+
+    adoraLaRutina(routine: Routine): boolean{
+        console.info(this.favoriteRoutines.includes(routine.name))
+        return this.favoriteRoutines.includes(routine.name)
+    }
 }
+
+export const user1 = new User('Rodrigo','Rodri1996','1234')
+export const user2 =new User('Pedro','NoobMaster69','1010')
+user1.putFavoriteRoutine('Abdominales')
+user1.putFavoriteRoutine('Correr')

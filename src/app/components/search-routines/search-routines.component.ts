@@ -36,6 +36,10 @@ export class SearchRoutinesComponent implements OnInit {
     this.inputEmpty=""
   }
 
+  rutinaIdeal(routine:Routine){
+    // return this.userLogueado.adoraLaRutina(routine)
+    return routine.name.startsWith('A') || routine.name.startsWith('C') 
+  }
 }
 
 class Buscador{

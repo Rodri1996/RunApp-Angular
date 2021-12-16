@@ -9,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  user:User = new User(0,"","","")
+  user:User = new User("","","")
   errorMessage!:string
 
   constructor(private userService:UserService) { }

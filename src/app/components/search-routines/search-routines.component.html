@@ -22,7 +22,7 @@
         <div class="routine-data">
             <strong>
                 {{routine.name}}  
-                <i class="far fa-star"></i>
+                <i class="far fa-star" [ngClass]="{'icon-star':rutinaIdeal(routine)}"></i>
             </strong>
             <span style="color: grey;">{{routine.duracion}} minutos</span>
             <p style="font-family:Arial, Helvetica, sans-serif ;">{{routine.creador.name}}</p>

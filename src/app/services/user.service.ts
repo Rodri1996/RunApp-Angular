@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from '../domain/user';
+import { User, user1, user2 } from '../domain/user';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +21,3 @@ export class UserService {
   }
 }
 
-export const user1 = new User(0,'Rodrigo','Rodri1996','1234')
-export const user2 =new User(1,'Pedro','NoobMaster69','1010')
