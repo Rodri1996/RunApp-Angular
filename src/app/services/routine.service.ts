@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Routine } from '../domain/routine';
+import { User } from '../domain/user';
+import { user1, user2 } from './user.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,10 +13,10 @@ export class RoutineService {
 
   constructor(private http:HttpClient) { 
     this.routines=[
-      new Routine('Abdominales','Juan Perez',60),
-      new Routine('Piernas','Tomás Gonzales',60),
-      new Routine('Flexiones de Brazos','Leo Messi',60),
-      new Routine('Correr','Rodrigo Nieto',60),
+      new Routine('Abdominales',user1,60),
+      new Routine('Piernas',user1,60),
+      new Routine('Flexiones de Brazos',user2,60),
+      new Routine('Correr',user1,60),
     ]
   }
 

@@ -1,5 +1,6 @@
-export class Routine{
-    constructor(public name:string,public autor:string,public duracion:number){}
+import { User } from "./user";
 
+export class Routine{
+    constructor(public name:string,public creador:User,public duracion:number){}
     
 }

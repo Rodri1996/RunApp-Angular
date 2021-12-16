@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Routine } from 'src/app/domain/routine';
+import { User } from 'src/app/domain/user';
 import { RoutineService } from 'src/app/services/routine.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-search-routines',
@@ -14,13 +16,15 @@ export class SearchRoutinesComponent implements OnInit {
   results:Routine[]=[]
   buscadorRutinas:Buscador = new Buscador()
   inputEmpty!:string
+  userLogueado!:User
 
   constructor(private routineService:RoutineService) { }
 
 
   ngOnInit(){
     this.routines = this.findRoutines()
-    console.info(this.routines)
+    const userJson:any = localStorage.getItem('userLogueado')
+    this.userLogueado = User.fromJson(JSON.parse(userJson))
   }
 
   findRoutines():Routine[]{
