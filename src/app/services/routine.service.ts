@@ -7,7 +7,7 @@ import { User, user1, user2 } from '../domain/user'
   providedIn: 'root'
 })
 export class RoutineService {
-
+  
   private routines:Routine[]=[]
 
   constructor(private http:HttpClient) { 
@@ -23,8 +23,11 @@ export class RoutineService {
     const routinesJson:any = await this.http.get('http://localhost:8080/routines').toPromise()
     return routinesJson.map((routineJson:any)=>Routine.fromJson(routineJson))
   }
-  // getRoutines():Routine[]{
-  //   return this.routines
-  // }
+  
+  async deleteRoutine(routineId: number) {
+    console.log('id rutina '+routineId)
+    await this.http.delete('http://localhost:8080/routine/'+routineId).toPromise()
+  }
+
 }
 

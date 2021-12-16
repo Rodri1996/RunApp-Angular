@@ -31,7 +31,8 @@
             <button class="button-little button-routine-little" *ngIf="routine.creador.username==userLogueado.username">
                 <i class="fas fa-pen icon edition-icon"></i>
             </button>
-            <button class="button-little button-routine-little" *ngIf="routine.creador.username==userLogueado.username">
+            <button class="button-little button-routine-little" *ngIf="routine.creador.username==userLogueado.username"
+            (click)="deleteRoutine(routine.id)">
                 <i class="fas fa-trash-alt icon delete-icon"></i>
             </button>
         </div>

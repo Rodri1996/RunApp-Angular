@@ -38,8 +38,11 @@ export class SearchRoutinesComponent implements OnInit {
   }
 
   rutinaIdeal(routine:Routine){
-    // return this.userLogueado.adoraLaRutina(routine)
     return routine.name.startsWith('A') || routine.name.startsWith('C') 
+  }
+
+  async deleteRoutine(routineId:number){
+    await this.routineService.deleteRoutine(routineId)
   }
 }
 
