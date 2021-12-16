@@ -2,7 +2,7 @@ import { Routine } from "./routine"
 
 export class User{
     
-    errorMessage:string=""
+    errorMessage=""
     favoriteRoutines:string[]=[]
 
     constructor(public name:string,public username:string,public password:string){

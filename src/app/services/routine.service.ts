@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Routine } from '../domain/routine';
-import { User, user1, user2 } from '../domain/user';
+import { HttpClient } from '@angular/common/http'
+import { Injectable } from '@angular/core'
+import { Routine } from '../domain/routine'
+import { User, user1, user2 } from '../domain/user'
 
 @Injectable({
   providedIn: 'root'

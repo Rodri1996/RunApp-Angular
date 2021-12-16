@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Routine } from 'src/app/domain/routine';
-import { User } from 'src/app/domain/user';
-import { RoutineService } from 'src/app/services/routine.service';
-import { UserService } from 'src/app/services/user.service';
+import { Component, OnInit } from '@angular/core'
+import { Routine } from 'src/app/domain/routine'
+import { User } from 'src/app/domain/user'
+import { RoutineService } from 'src/app/services/routine.service'
+import { UserService } from 'src/app/services/user.service'
 
 @Component({
   selector: 'app-search-routines',
@@ -11,7 +11,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class SearchRoutinesComponent implements OnInit {
 
-  patronBusqueda:string=""
+  patronBusqueda=""
   routines:Routine[]=[]
   results:Routine[]=[]
   buscadorRutinas:Buscador = new Buscador()
@@ -45,6 +45,6 @@ export class SearchRoutinesComponent implements OnInit {
 class Buscador{
 
   filter(routines:Routine[],patron:string):Routine[]{
-    return routines.filter(routine=>routine.name.toLowerCase().match(patron));
+    return routines.filter(routine=>routine.name.toLowerCase().match(patron))
   }
 }

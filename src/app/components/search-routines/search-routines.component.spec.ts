@@ -1,25 +1,25 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { SearchRoutinesComponent } from './search-routines.component';
+import { SearchRoutinesComponent } from './search-routines.component'
 
 describe('SearchRoutinesComponent', () => {
-  let component: SearchRoutinesComponent;
-  let fixture: ComponentFixture<SearchRoutinesComponent>;
+  let component: SearchRoutinesComponent
+  let fixture: ComponentFixture<SearchRoutinesComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ SearchRoutinesComponent ]
     })
-    .compileComponents();
-  });
+    .compileComponents()
+  })
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SearchRoutinesComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(SearchRoutinesComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})
