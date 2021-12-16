@@ -6,8 +6,14 @@
             <div class="icono-input">
                 <i class="fas fa-user icon"></i>
             </div>
-            <input type="text" class="inputText">
+            <input type="text" class="inputText" [(ngModel)]="user.username">
         </section>
+    </div>
+    <div *ngIf="user.errorMessage !== '' " class="ErrorUser-danger">
+        {{user.errorMessage}}
+        <div>    
+            <i class="fas fa-exclamation-triangle icon-alert-danger"></i>
+        </div>
     </div>
     <div class="secondary-container">
         <p class="label-input">Contraseña</p>
@@ -15,10 +21,10 @@
             <div class="icono-input">
                 <i class="fas fa-key icon"></i>
             </div>
-            <input type="password" class="inputText">
+            <input type="password" class="inputText" [(ngModel)]="user.password">>
         </section>
     </div>
-    <button class="button-big">
+    <button class="button-big" (click)="loginUser()">
         Ingresar
     </button>
 </section>

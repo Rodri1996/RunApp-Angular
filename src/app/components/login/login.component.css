@@ -46,3 +46,24 @@
     height: 16px;
     width:18px;
 }
+
+.ErrorUser-danger{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    border: solid 2px rgb(184, 8, 8);
+    border-radius: 6px;
+    background-color: rgb(231, 116, 116);
+    /* height: 80px; */
+    width: 90%;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 1.5em;
+    color: var(--font-color-primary);
+}
+
+.icon-alert-danger{
+    height: 30px;
+    width: 40px;
+}
