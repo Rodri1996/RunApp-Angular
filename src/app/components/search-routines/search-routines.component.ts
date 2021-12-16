@@ -21,14 +21,15 @@ export class SearchRoutinesComponent implements OnInit {
   constructor(private routineService:RoutineService) { }
 
 
-  ngOnInit(){
-    this.routines = this.findRoutines()
+  async ngOnInit(){
+    this.routines = await this.findRoutines()
+    console.info(this.routines)
     const userJson:any = localStorage.getItem('userLogueado')
     this.userLogueado = User.fromJson(JSON.parse(userJson))
   }
 
-  findRoutines():Routine[]{
-    return this.routineService.getRoutines()
+  async findRoutines(){
+    return await this.routineService.getRoutines()
   }
 
   buscarRutinas(){

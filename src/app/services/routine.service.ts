@@ -19,10 +19,12 @@ export class RoutineService {
     ]
   }
 
-  // async getRoutines(){
-  //   const routines = await this.http.get('http://localhost:8080/rutinas')
-  // }
-  getRoutines():Routine[]{
-    return this.routines
+  async getRoutines(){
+    const routinesJson:any = await this.http.get('http://localhost:8080/routines').toPromise()
+    return routinesJson.map((routineJson:any)=>Routine.fromJson(routineJson))
   }
+  // getRoutines():Routine[]{
+  //   return this.routines
+  // }
 }
+
