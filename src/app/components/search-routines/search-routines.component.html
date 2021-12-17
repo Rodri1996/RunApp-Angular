@@ -2,12 +2,11 @@
     <input type="text" class="inputText"
         [(ngModel)]="patronBusqueda"
         placeholder="Busque una rutina aquí"
-        value={{this.inputEmpty}}
+        value={{inputEmpty}}
     >
-    
-        <button class="button-little button-search-little" (click)="buscarRutinas()">
-            <i class="fas fa-search"></i>
-        </button>
+    <button class="button-little button-search-little" (click)="buscarRutinas()">
+        <i class="fas fa-search"></i>
+    </button>
 </section>
 <section class="primary-section">
     <section class="result">
@@ -18,11 +17,11 @@
         </div>
     </section>
     <!-- | routine:patronBusqueda -->
-    <section class="routine" *ngFor="let routine of results">
+    <section class="routine {{rutinaEliminada(routine)}}" *ngFor="let routine of results">
         <div class="routine-data">
             <strong>
-                {{routine.name}}  
                 <i class="far fa-star" [ngClass]="{'icon-star':rutinaIdeal(routine)}"></i>
+                <p>{{routine.name}}</p>  
             </strong>
             <span style="color: grey;">{{routine.duration}} minutos</span>
             <p style="font-family:Arial, Helvetica, sans-serif ;">{{routine.creador.name}}</p>
@@ -31,10 +30,9 @@
             <button class="button-little button-routine-little" *ngIf="routine.creador.username==userLogueado.username">
                 <i class="fas fa-pen icon edition-icon"></i>
             </button>
-            <button class="button-little button-routine-little" *ngIf="routine.creador.username==userLogueado.username"
-            (click)="deleteRoutine(routine.id)">
-                <i class="fas fa-trash-alt icon delete-icon"></i>
-            </button>
+
+            <app-delete-warning [rutina]="routine" [usuarioLogueado]="userLogueado"></app-delete-warning>
+        
         </div>
     </section>
 </section>

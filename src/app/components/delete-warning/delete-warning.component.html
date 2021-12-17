@@ -1,0 +1,17 @@
+<button class="button-little button-routine-little" *ngIf="rutina.creador.username==usuarioLogueado.username && visible" (click)="selectRoutine()">
+    <i class="fas fa-trash-alt icon delete-icon"></i>
+</button>
+<div class="warning-message" *ngIf="!visible">
+    <div>
+        <i class="fas fa-exclamation-triangle icon-alert-warning"></i>
+        <p>
+            ¿Eliminar rutina?
+        </p>
+    </div>
+    <div class="group-button">
+        <button class="button-little" (click)="deleteRoutine(rutina.id)"> Si
+        </button>
+        <button class="button-little" (click)="occult()"> No
+        </button>
+    </div>
+</div>

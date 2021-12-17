@@ -1,0 +1,45 @@
+
+.button-little{
+    width: 50px;
+}
+
+.button-routine-little{
+    margin: 2px;
+    border-radius: 7px;
+}
+
+.delete-icon{
+    color: red;
+}
+
+.icon{
+    height: 16px;
+    width:18px;
+}
+
+.warning-message{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(245, 245, 101);
+    border: 1px solid rgb(255, 166, 0);
+    margin-top: 5px;
+}
+
+.icon-alert-warning{
+    margin-right: 10px;
+    color: orangered;
+}
+
+.button-little{
+    width: 50px;
+}
+
+.group-button{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
 import { Routine } from 'src/app/domain/routine'
 import { User } from 'src/app/domain/user'
 import { RoutineService } from 'src/app/services/routine.service'
@@ -15,34 +16,34 @@ export class SearchRoutinesComponent implements OnInit {
   routines:Routine[]=[]
   results:Routine[]=[]
   buscadorRutinas:Buscador = new Buscador()
-  inputEmpty!:string
+  inputEmpty=""
+  // visible=true
   userLogueado!:User
 
-  constructor(private routineService:RoutineService) { }
+  constructor(private routineService:RoutineService,private router:Router) { }
 
 
   async ngOnInit(){
-    this.routines = await this.findRoutines()
-    console.info(this.routines)
+    await this.findRoutines()
     const userJson:any = localStorage.getItem('userLogueado')
     this.userLogueado = User.fromJson(JSON.parse(userJson))
   }
 
   async findRoutines(){
-    return await this.routineService.getRoutines()
+    this.routines = await this.routineService.getRoutines()
   }
 
   buscarRutinas(){
-    this.results = this.buscadorRutinas.filter(this.routines,this.patronBusqueda)
     this.inputEmpty=""
+    this.results = this.buscadorRutinas.filter(this.routines,this.patronBusqueda)
   }
 
   rutinaIdeal(routine:Routine){
     return routine.name.startsWith('A') || routine.name.startsWith('C') 
   }
 
-  async deleteRoutine(routineId:number){
-    await this.routineService.deleteRoutine(routineId)
+  rutinaEliminada(routine:Routine){
+    return this.routines.includes(routine)
   }
 }
 

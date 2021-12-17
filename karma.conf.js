@@ -25,11 +25,12 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/RunApp2021'),
+      dir: require('path').join(__dirname, './coverage/eg-conversor-angular'),
       subdir: '.',
       reporters: [
         { type: 'html' },
-        { type: 'text-summary' }
+        { type: 'text-summary' }, // <-- agregar una coma al final
+        { type: 'json-summary' }  // <-- agregar esta línea
       ]
     },
     reporters: ['progress', 'kjhtml'],
