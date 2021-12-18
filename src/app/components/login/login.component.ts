@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
 import { User } from 'src/app/domain/user'
 import { UserService } from 'src/app/services/user.service'
 
@@ -7,16 +8,13 @@ import { UserService } from 'src/app/services/user.service'
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
   user:User = new User("","","")
   errorMessage!:string
 
-  constructor(private userService:UserService) { }
-
-  ngOnInit(): void {
-    
-  }
+  constructor(private userService:UserService) {
+  } 
 
   loginUser(){
     localStorage.removeItem('userLogueado')
@@ -26,3 +24,4 @@ export class LoginComponent implements OnInit {
   }
 
 }
+

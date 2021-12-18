@@ -27,7 +27,8 @@ import { DeleteWarningComponent } from './components/delete-warning/delete-warni
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

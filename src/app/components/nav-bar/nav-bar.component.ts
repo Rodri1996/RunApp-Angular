@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent {
 
-  constructor() { }
+  isLogin=()=>this.location.path()=='/login'
 
-  ngOnInit(): void {
+  constructor(private location:Location){
+
   }
-
 }
