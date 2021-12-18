@@ -11,7 +11,8 @@ import { FooterComponent } from './components/footer/footer.component'
 import { SearchRoutinesComponent } from './components/search-routines/search-routines.component'
 import { LoginComponent } from './components/login/login.component'
 import { FormsModule } from '@angular/forms'
-import { DeleteWarningComponent } from './components/delete-warning/delete-warning.component'
+import { DeleteWarningComponent } from './components/delete-warning/delete-warning.component';
+import { BurgerComponent } from './components/burger/burger.component'
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { DeleteWarningComponent } from './components/delete-warning/delete-warni
     SearchRoutinesComponent,
     LoginComponent,
     DeleteWarningComponent,
+    BurgerComponent,
   ],
   imports: [
     BrowserModule,

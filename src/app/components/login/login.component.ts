@@ -13,7 +13,7 @@ export class LoginComponent {
   user:User = new User("","","")
   errorMessage!:string
 
-  constructor(private userService:UserService) {
+  constructor(private userService:UserService,private router:Router) {
   } 
 
   loginUser(){
@@ -21,7 +21,12 @@ export class LoginComponent {
     this.user.validateUser()
     const userLogeado = this.userService.searchUser(this.user)
     localStorage.setItem('userLogueado',JSON.stringify(this.user))
+    this.exitComponent()
+    //Aca tendria que usar excepciones y no errores como strings
   }
 
+  exitComponent(){
+    this.router.navigate(['/'])
+  }
 }
 

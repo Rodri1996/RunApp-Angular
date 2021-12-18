@@ -7,4 +7,5 @@
     font-family: var(--font-family-primary);
     font-size: 3.5em;
     color: var(--font-color-primary);
+    height: 100px;
 }

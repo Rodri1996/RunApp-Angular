@@ -1,0 +1,11 @@
+<button *ngIf="showBurguer" (click)="occultBurger()" class="button-little">
+    <i class="fas fa-bars"></i>
+</button>
+<section class="burger-menu" *ngIf="!showBurguer">
+    <a class="link" (click)="showBurguer=true">Home</a>
+    <a class="link" (click)="showBurguer=true">Mis Rutinas</a>
+    <a class="link" (click)="showBurguer=true">Perfil</a>
+    <a routerLink='/login' class="link" (click)="showBurguer=true">
+        <i class="fas fa-sign-out-alt"></i>
+    </a>
+</section>
