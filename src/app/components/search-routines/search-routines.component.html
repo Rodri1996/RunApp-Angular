@@ -17,7 +17,7 @@
         </div>
     </section>
     <!-- | routine:patronBusqueda -->
-    <section class="routine {{rutinaEliminada(routine)}}" *ngFor="let routine of results">
+    <section class="routine {{rutinaEliminada(routine)}} {{busquedaRealizada()}}" *ngFor="let routine of results">
         <div class="routine-data">
             <strong>
                 <i class="far fa-star" [ngClass]="{'icon-star':rutinaIdeal(routine)}"></i>

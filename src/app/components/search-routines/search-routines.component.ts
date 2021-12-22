@@ -17,11 +17,12 @@ export class SearchRoutinesComponent implements OnInit {
   results:Routine[]=[]
   buscadorRutinas:Buscador = new Buscador()
   inputEmpty=""
-  // visible=true
+  busquedaActiva!:boolean
   userLogueado!:User
 
-  constructor(private routineService:RoutineService,private router:Router) { }
-
+  constructor(private routineService:RoutineService,private router:Router) { 
+    this.busquedaActiva=false
+  }
 
   async ngOnInit(){
     await this.findRoutines()
@@ -34,6 +35,7 @@ export class SearchRoutinesComponent implements OnInit {
   }
 
   buscarRutinas(){
+    this.busquedaActiva=true
     this.inputEmpty=""
     this.results = this.buscadorRutinas.filter(this.routines,this.patronBusqueda)
   }
@@ -44,6 +46,10 @@ export class SearchRoutinesComponent implements OnInit {
 
   rutinaEliminada(routine:Routine){
     return this.routines.includes(routine)
+  }
+
+  busquedaRealizada():boolean{
+    return this.patronBusqueda!=="" && this.busquedaActiva
   }
 }
 

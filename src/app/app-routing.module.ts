@@ -6,7 +6,7 @@ import { SearchRoutinesComponent } from './components/search-routines/search-rou
 
 const routes:Routes = [
   { path:'login',component:LoginComponent },
-  { path:'',component:SearchRoutinesComponent }
+  { path:'searchRoutines',component:SearchRoutinesComponent }
 ]
 
 @NgModule({

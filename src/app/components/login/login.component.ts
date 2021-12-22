@@ -26,7 +26,7 @@ export class LoginComponent {
   }
 
   exitComponent(){
-    this.router.navigate(['/'])
+    this.router.navigate(['searchRoutines'])
   }
 }
 
