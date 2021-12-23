@@ -12,7 +12,8 @@ import { SearchRoutinesComponent } from './components/search-routines/search-rou
 import { LoginComponent } from './components/login/login.component'
 import { FormsModule } from '@angular/forms'
 import { DeleteWarningComponent } from './components/delete-warning/delete-warning.component';
-import { BurgerComponent } from './components/burger/burger.component'
+import { BurgerComponent } from './components/burger/burger.component';
+import { PerfilComponent } from './components/perfil/perfil.component'
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { BurgerComponent } from './components/burger/burger.component'
     LoginComponent,
     DeleteWarningComponent,
     BurgerComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,7 @@
 <section class="burger-menu" *ngIf="!showBurguer">
     <a class="link" (click)="showBurguer=true" routerLink="./searchRoutines">Home</a>
     <a class="link" (click)="showBurguer=true">Mis Rutinas</a>
-    <a class="link" (click)="showBurguer=true">Perfil</a>
+    <a class="link" (click)="showBurguer=true" routerLink="perfil">Perfil</a>
     <a routerLink='/login' class="link" (click)="showBurguer=true">
         <i class="fas fa-sign-out-alt"></i>
     </a>

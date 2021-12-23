@@ -1,0 +1,34 @@
+.img-user{
+    width: 20px ;
+}
+
+.secundary-section,.third-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.secundary-section{
+    padding: 0.8em;
+}
+
+.third-section{
+    padding: 0.5em;
+}
+
+.size-medium{
+    width: 50%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.box-flex{
+    display: flex;
+}
+
+.label-input{
+    margin-bottom: 5px;
+}
+
+.title-section{
+    font-size: 2em;
+}

@@ -31,6 +31,16 @@ body{
     background-color: var(--tertiary-color);
 }
 
+.box-descripcion{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--quinary-color);
+    padding: 0.5em 1em;
+    color: var(--font-color-primary);
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
 .button-big{
     height: 50px;
     width: 100px;
@@ -59,6 +69,7 @@ body{
 .inputText{
     border: 1px solid;
     text-align: center;
+    height: 40px;
 }
 
 .label-input{

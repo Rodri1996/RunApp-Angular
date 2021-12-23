@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common'
 import { RouterModule, Routes } from '@angular/router'
 import { LoginComponent } from './components/login/login.component'
 import { SearchRoutinesComponent } from './components/search-routines/search-routines.component'
+import { PerfilComponent } from './components/perfil/perfil.component'
 
 const routes:Routes = [
   { path:'login',component:LoginComponent },
-  { path:'searchRoutines',component:SearchRoutinesComponent }
+  { path:'searchRoutines',component:SearchRoutinesComponent },
+  { path:'perfil', component: PerfilComponent }
 ]
 
 @NgModule({

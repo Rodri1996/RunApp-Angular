@@ -9,16 +9,6 @@
     padding: 10px 0;
 }
 
-.result{
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--quinary-color);
-    padding: 0.5em 1em;
-    color: var(--font-color-primary);
-    font-size: 2em;
-    margin-bottom: 30px;
-}
-
 .routine{
     display: flex;
     background-color: var(--quaternary-color);
@@ -59,10 +49,6 @@
     border-bottom-left-radius: 6px;
     font-size: 15px;
     font-weight: 100;
-}
-
-.inputText{
-    height: 40px;
 }
 
 .edition-icon{
