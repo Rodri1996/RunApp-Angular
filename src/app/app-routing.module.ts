@@ -6,7 +6,7 @@ import { SearchRoutinesComponent } from './components/search-routines/search-rou
 import { PerfilComponent } from './components/perfil/perfil.component'
 
 const routes:Routes = [
-  { path:'login',component:LoginComponent },
+  { path:'',component:LoginComponent },
   { path:'searchRoutines',component:SearchRoutinesComponent },
   { path:'perfil', component: PerfilComponent }
 ]

@@ -2,33 +2,77 @@
     width: 20px ;
 }
 
-.secundary-section,.third-section{
+.secundary-section{
     display: flex;
     flex-direction: column;
-}
-
-.secundary-section{
     padding: 0.8em;
 }
-
-.third-section{
-    padding: 0.5em;
-}
-
-.size-medium{
-    width: 50%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.box-flex{
-    display: flex;
-}
-
-.label-input{
-    margin-bottom: 5px;
+/* ----------------------Clases nuevas:-------- */
+.label{
+    font-family: sans-serif;
 }
 
 .title-section{
     font-size: 2em;
+    margin: 8px 0;
+}
+
+.input{
+    border: 3px solid var(--primary-color);
+    border-radius: 8px;
+    height: 40px;
+    padding: 5px;
+    font-size: 1.7em;
+}
+
+.input-label,.input-label-medium{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label-medium{
+    max-width: 48%; 
+    margin-top: 10px;
+}
+
+.input-multiples{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input:hover{
+    border-color: var(--quinary-color);
+}
+
+.seccion-terciaria{
+    display: flex;
+    flex-direction: column;
+}
+
+.box-gruposMusculares{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.button-grupoMuscular{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 60px;
+    font-weight: 500;
+    margin-top: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+}
+
+.button-grupoMuscular:hover{
+    background-color: var(--primary-color);
+    color: var(--font-color-primary);
+}
+
+.button-grupoMuscular,.label{
+    font-size: 1.8em;
 }
